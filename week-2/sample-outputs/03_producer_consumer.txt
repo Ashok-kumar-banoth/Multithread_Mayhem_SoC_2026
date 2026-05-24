@@ -1,0 +1,61 @@
+Sample output of: ./producer_consumer
+=====================================
+
+One full run. The producer is faster than the consumer, so the buffer
+fills up and the producer has to wait several times. At the end the
+consumer catches up and drains the buffer. Every item is delivered
+exactly once.
+
+[producer] produced 0  (buffer now has 1)
+[consumer] consumed 0  (buffer now has 0)
+[producer] produced 1  (buffer now has 1)
+[producer] produced 2  (buffer now has 2)
+[consumer] consumed 1  (buffer now has 1)
+[producer] produced 3  (buffer now has 2)
+[producer] produced 4  (buffer now has 3)
+[consumer] consumed 2  (buffer now has 2)
+[producer] produced 5  (buffer now has 3)
+[producer] produced 6  (buffer now has 4)
+[producer] produced 7  (buffer now has 5)
+[consumer] consumed 3  (buffer now has 4)
+[producer] produced 8  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 4  (buffer now has 4)
+[producer] produced 9  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 5  (buffer now has 4)
+[producer] produced 10  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 6  (buffer now has 4)
+[producer] produced 11  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 7  (buffer now has 4)
+[producer] produced 12  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 8  (buffer now has 4)
+[producer] produced 13  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 9  (buffer now has 4)
+[producer] produced 14  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 10  (buffer now has 4)
+[producer] produced 15  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 11  (buffer now has 4)
+[producer] produced 16  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 12  (buffer now has 4)
+[producer] produced 17  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 13  (buffer now has 4)
+[producer] produced 18  (buffer now has 5)
+[producer] buffer full, waiting...
+[consumer] consumed 14  (buffer now has 4)
+[producer] produced 19  (buffer now has 5)
+[consumer] consumed 15  (buffer now has 4)
+[consumer] consumed 16  (buffer now has 3)
+[consumer] consumed 17  (buffer now has 2)
+[consumer] consumed 18  (buffer now has 1)
+[consumer] consumed 19  (buffer now has 0)
+
+All 20 items produced and consumed. No items lost.

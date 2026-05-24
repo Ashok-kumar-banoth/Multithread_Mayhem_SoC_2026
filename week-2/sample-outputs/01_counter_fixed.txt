@@ -1,0 +1,31 @@
+Sample output of: ./counter_fixed
+=================================
+
+Five consecutive runs. Unlike last week's racy version, the answer is
+always exactly 20000000. The mutex guarantees the race cannot happen.
+
+--- Run 1 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — every time.
+
+--- Run 2 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — every time.
+
+--- Run 3 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — every time.
+
+--- Run 4 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — every time.
+
+--- Run 5 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — every time.
+

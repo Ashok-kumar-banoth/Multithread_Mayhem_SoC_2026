@@ -1,0 +1,20 @@
+Sample output of: ./deadlock_demo
+=================================
+
+This program deadlocks deliberately. The output below was captured
+with a 4-second timeout; the program would otherwise run forever.
+Both threads acquire their first lock, then block forever trying to
+acquire the second.
+
+Starting deadlock demo. Press Ctrl+C when you've seen enough.
+
+[A] trying to lock X
+[A] got X, now sleeping briefly...
+[B] trying to lock Y
+[B] got Y, now sleeping briefly...
+[B] now trying to lock X
+[A] now trying to lock Y
+
+[timed out after 4 seconds — process killed]
+Notice that both [A] and [B] reach the 'trying to lock' line for
+the SECOND lock, and never get past it. That is the deadlock.

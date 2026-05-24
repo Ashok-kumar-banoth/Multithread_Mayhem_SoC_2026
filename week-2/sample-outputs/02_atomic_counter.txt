@@ -1,0 +1,33 @@
+Sample output of: ./atomic_counter
+=================================
+
+Five consecutive runs. The atomic version is also always correct,
+and on most hardware noticeably faster than the mutex-based version
+because there is no kernel-level locking — just a single hardware
+atomic instruction per increment.
+
+--- Run 1 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — and faster than a mutex.
+
+--- Run 2 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — and faster than a mutex.
+
+--- Run 3 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — and faster than a mutex.
+
+--- Run 4 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — and faster than a mutex.
+
+--- Run 5 ---
+Final counter:  20000000
+Expected:       20000000
+Result: CORRECT — and faster than a mutex.
+
