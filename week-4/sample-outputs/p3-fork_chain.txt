@@ -1,0 +1,15 @@
+$ fork_chain 3
+Depth 0: PID 4, Parent PID 2
+Depth 1: PID 5, Parent PID 4
+Depth 2: PID 6, Parent PID 5
+I am the leaf! No more children.
+Total processes in chain: 3
+
+$ fork_chain 5
+Depth 0: PID 4, Parent PID 2
+Depth 1: PID 5, Parent PID 4
+Depth 2: PID 6, Parent PID 5
+Depth 3: PID 7, Parent PID 6
+Depth 4: PID 8, Parent PID 7
+I am the leaf! No more children.
+Total processes in chain: 5

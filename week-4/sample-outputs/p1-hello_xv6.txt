@@ -1,0 +1,10 @@
+$ hello_xv6
+Hello, xv6! This is alice.
+Number of arguments: 0
+
+$ hello_xv6 hi there!
+Hello, xv6! This is alice.
+Number of arguments: 2
+arg 1: hi
+arg 2: there!
+xv6 knows 23 system calls.

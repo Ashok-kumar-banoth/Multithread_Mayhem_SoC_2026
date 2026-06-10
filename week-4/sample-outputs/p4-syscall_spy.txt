@@ -1,0 +1,12 @@
+$ syscall_spy
+Syscall Spy Report for PID 3:
+  getpid()       → 3
+  uptime()       → 2741
+  fork()         → 4  (child PID)
+  --- in child (PID 4) ---
+  getpid()       → 4
+  --- back in parent (PID 3) ---
+  sleep(10)      → 0
+  write(1, ...)  → 13
+  dup(0)         → 3
+  wait()         → 4  (reaped child PID 4)
